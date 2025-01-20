@@ -49,8 +49,6 @@ This is a simple blog commenting system built with Laravel. The system allows us
 
 7. Install authentication scaffolding (UI):
    
-        composer require laravel/ui
-        php artisan ui bootstrap --auth
         npm install && npm run dev
    
 
