@@ -6,15 +6,15 @@ This is a simple blog commenting system built with Laravel. The system allows us
 - **Post Management**: Users can create, edit, and delete blog posts.
 - **Comment System**: Users can add comments to posts, view all comments, and edit/delete their own comments.
 - **Post Filtering**: Users can filter posts by category.
-- **Login/Logout**: User authentication to manage post and comment permissions.
+- **Login/Logout**: User authentication to manage post and comment permissions using Laravel’s built-in authentication system with Bootstrap-based UI for login and registration.
 - **Policies**: Post and comment actions are governed by Laravel Policies to ensure proper authorization.
 
 ## Technologies Used
 - **Backend**: Laravel 11
 - **Database**: MySQL
 - **ORM**: Eloquent ORM for database interactions
-- **Frontend**: Blade templating engine
-- **Authentication**: Laravel’s built-in authentication system
+- **Frontend**: Blade templating engine, Bootstrap for UI
+- **Authentication**: Laravel’s built-in authentication system with Bootstrap-based UI
 
 ## Setup Instructions
 1. Clone the repository:
@@ -41,7 +41,14 @@ This is a simple blog commenting system built with Laravel. The system allows us
     php artisan db:seed
     ```
 
-6. Serve the application:
+6. Install authentication scaffolding (UI):
+    ```bash
+    composer require laravel/ui
+    php artisan ui bootstrap --auth
+    npm install && npm run dev
+    ```
+
+7. Serve the application:
     ```bash
     php artisan serve
     ```
